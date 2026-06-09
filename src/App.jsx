@@ -12,6 +12,7 @@ const projects = [
     tags: ['React', 'Redux', 'Node.js', 'MongoDB', 'Gemini', 'Docker', 'GCP'],
     live: 'https://physiohelp-page.web.app',
     code: 'https://github.com/ukruner/vite_react_portfolio',
+    video: `${import.meta.env.BASE_URL}videos/physiohelp-demo.mp4`,
   },
   {
     title: 'Food order web app',
@@ -24,6 +25,7 @@ const projects = [
     tags: ['React', 'Tailwind CSS', 'Context API', 'Hooks'],
     live: 'https://ukruner.github.io/Food-order-2.0/',
     code: 'https://github.com/ukruner/Food-order-2.0',
+    video: `${import.meta.env.BASE_URL}videos/food-order-demo.mp4`,
   },
   {
     title: 'Car dealership backend',
@@ -36,6 +38,7 @@ const projects = [
     tags: ['Python', 'Django', 'REST APIs', 'MongoDB', 'Google Cloud'],
     live: 'https://capstone-web-lk3kjwz4oq-nw.a.run.app/djangoapp/',
     code: 'https://github.com/ukruner/Car-dealership-project',
+    video: `${import.meta.env.BASE_URL}videos/car-dealership-demo.mp4`,
   },
 ]
 
@@ -145,13 +148,40 @@ function App() {
           <p className="eyebrow">Profile</p>
           <h2>Full-stack foundations with practical delivery habits.</h2>
         </div>
-        <p>
-          I build and deploy frontend, backend and full-stack applications using
-          React, Node.js and Python/Django, supported by cloud technologies and
-          containerisation. My healthcare background gives me a strong bias
-          toward clear documentation, reliable workflows and careful
-          communication with stakeholders.
-        </p>
+        <div className="profile-copy">
+          <p>
+            I am a junior software developer with hands-on experience building
+            full-stack applications, REST APIs and AI-integrated features. I care
+            about performance, maintainability and systems that are easy for the
+            next person to understand.
+          </p>
+          <p>
+            My professional background in occupational health physiotherapy has
+            trained me to work calmly in regulated environments, communicate
+            clearly and document decisions with accuracy. Those habits transfer
+            directly into how I structure code and collaborate on technical work.
+          </p>
+        </div>
+      </section>
+
+      <section className="section volunteer-spotlight" aria-label="Volunteer full-stack development">
+        <div>
+          <p className="eyebrow">Active product experience</p>
+          <h2>Volunteer full-stack development on a marketable product.</h2>
+        </div>
+        <div className="spotlight-card">
+          <p>
+            I already contribute as a volunteer full-stack developer for
+            waddyado.com and community.waddyado.com, working across front-end,
+            back-end, REST API integrations, database operations, TypeScript
+            deployment support, bug fixing, SEO tasks and QA.
+          </p>
+          <p>
+            The work is not isolated practice: it supports a real product and
+            requires collaboration, release-minded thinking and improvements
+            that affect usability and platform reliability.
+          </p>
+        </div>
       </section>
 
       <section className="section" id="projects">
@@ -172,6 +202,15 @@ function App() {
                   <span>{project.period}</span>
                 </div>
                 <h3>{project.title}</h3>
+                <video
+                  className="project-video"
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                  src={project.video}
+                  aria-label={`${project.title} screen recording demo`}
+                />
                 <p>{project.description}</p>
                 <p className="impact">{project.impact}</p>
                 <ul className="tag-list" aria-label={`${project.title} technologies`}>
@@ -200,16 +239,11 @@ function App() {
         </div>
         <div className="about-copy">
           <p>
-            I am a junior software developer with hands-on experience building
-            full-stack applications, REST APIs and AI-integrated features. I care
-            about performance, maintainability and systems that are easy for the
-            next person to understand.
-          </p>
-          <p>
-            My professional background in occupational health physiotherapy has
-            trained me to work calmly in regulated environments, communicate
-            clearly and document decisions with accuracy. Those habits transfer
-            directly into how I structure code and collaborate on technical work.
+            I build and deploy frontend, backend and full-stack applications
+            using React, Node.js and Python/Django, supported by cloud
+            technologies and containerisation. My healthcare background gives me
+            a strong bias toward clear documentation, reliable workflows and
+            careful communication with stakeholders.
           </p>
         </div>
       </section>

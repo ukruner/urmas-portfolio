@@ -125,17 +125,17 @@ p {
 }
 
 h1 {
-  max-width: 820px;
+  max-width: 760px;
   margin-bottom: 22px;
-  font-size: clamp(3rem, 8vw, 6.8rem);
-  line-height: 0.95;
+  font-size: clamp(2.25rem, 5.6vw, 4.7rem);
+  line-height: 1;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 18px;
-  font-size: clamp(2rem, 4vw, 4.2rem);
-  line-height: 1;
+  font-size: clamp(1.75rem, 3.2vw, 3.45rem);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -219,7 +219,7 @@ h3 {
 
 .hero-panel h2 {
   margin-bottom: 0;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
 }
 
 .metric-list,
@@ -256,18 +256,35 @@ h3 {
 
 .intro-grid,
 .about-layout,
-.contact-section {
+.contact-section,
+.volunteer-spotlight {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 48px;
   border-top: 1px solid var(--line);
 }
 
-.intro-grid p:last-child,
+.profile-copy p,
 .about-copy p,
-.contact-section p {
+.contact-section p,
+.spotlight-card p {
   color: var(--muted);
   font-size: 1.08rem;
+}
+
+.profile-copy p:last-child,
+.spotlight-card p:last-child {
+  margin-bottom: 0;
+}
+
+.spotlight-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(111, 143, 114, 0.18), rgba(217, 154, 61, 0.14)),
+    rgba(255, 250, 240, 0.72);
+  box-shadow: 0 16px 46px rgba(23, 33, 33, 0.08);
 }
 
 .section-heading {
@@ -313,6 +330,19 @@ h3 {
 
 .project-body p {
   color: var(--muted);
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  aspect-ratio: 1440 / 671;
+  margin: 16px 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--ink);
+  object-fit: contain;
+  box-shadow: 0 18px 44px rgba(23, 33, 33, 0.1);
 }
 
 .impact {
@@ -435,6 +465,7 @@ h3 {
   .intro-grid,
   .about-layout,
   .contact-section,
+  .volunteer-spotlight,
   .timeline-item {
     grid-template-columns: 1fr;
   }
@@ -474,7 +505,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.55rem, 15vw, 4.6rem);
+    font-size: clamp(2.2rem, 11vw, 3.35rem);
   }
 
   .project-card {
