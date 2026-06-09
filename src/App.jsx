@@ -12,7 +12,7 @@ const projects = [
     tags: ['React', 'Redux', 'Node.js', 'MongoDB', 'Gemini', 'Docker', 'GCP'],
     live: 'https://physiohelp-page.web.app',
     code: 'https://github.com/ukruner/vite_react_portfolio',
-    video: `${import.meta.env.BASE_URL}videos/physiohelp-demo.mp4`,
+    demo: `${import.meta.env.BASE_URL}videos/physiohelp-demo.gif`,
   },
   {
     title: 'Food order web app',
@@ -25,7 +25,7 @@ const projects = [
     tags: ['React', 'Tailwind CSS', 'Context API', 'Hooks'],
     live: 'https://ukruner.github.io/Food-order-2.0/',
     code: 'https://github.com/ukruner/Food-order-2.0',
-    video: `${import.meta.env.BASE_URL}videos/food-order-demo.mp4`,
+    demo: `${import.meta.env.BASE_URL}videos/food-order-demo.gif`,
   },
   {
     title: 'Car dealership backend',
@@ -38,7 +38,7 @@ const projects = [
     tags: ['Python', 'Django', 'REST APIs', 'MongoDB', 'Google Cloud'],
     live: 'https://capstone-web-lk3kjwz4oq-nw.a.run.app/djangoapp/',
     code: 'https://github.com/ukruner/Car-dealership-project',
-    video: `${import.meta.env.BASE_URL}videos/car-dealership-demo.mp4`,
+    demo: `${import.meta.env.BASE_URL}videos/car-dealership-demo.gif`,
   },
 ]
 
@@ -202,15 +202,11 @@ function App() {
                   <span>{project.period}</span>
                 </div>
                 <h3>{project.title}</h3>
-                <video
-                  className="project-video"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  src={project.video}
-                  aria-label={`${project.title} animated screen recording preview`}
+                <img
+                  className="project-demo"
+                  src={project.demo}
+                  alt={`${project.title} animated screen recording preview`}
+                  loading="lazy"
                 />
                 <p>{project.description}</p>
                 <p className="impact">{project.impact}</p>

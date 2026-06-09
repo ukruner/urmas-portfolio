@@ -125,9 +125,9 @@ p {
 }
 
 h1 {
-  max-width: 720px;
+  max-width: 680px;
   margin-bottom: 22px;
-  font-size: clamp(2rem, 4.8vw, 3.95rem);
+  font-size: clamp(2.1rem, 3.84vw, 4.14rem);
   line-height: 1.04;
   letter-spacing: 0;
 }
@@ -332,11 +332,10 @@ h3 {
   color: var(--muted);
 }
 
-.project-video {
+.project-demo {
   display: block;
-  width: min(34%, 360px);
-  min-width: 260px;
-  max-height: 210px;
+  width: min(34%, 320px);
+  min-width: 220px;
   aspect-ratio: 1440 / 671;
   margin: 16px 0 18px;
   border: 1px solid var(--line);
@@ -516,8 +515,8 @@ h3 {
     padding: 18px;
   }
 
-  .project-video {
-    width: min(100%, 360px);
+  .project-demo {
+    width: min(66%, 320px);
     min-width: 0;
   }
 
