@@ -111,7 +111,7 @@ a {
 .eyebrow {
   margin: 0 0 14px;
   color: var(--coral);
-  font-size: 0.78rem;
+  font-size: 0.975rem;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -212,7 +212,7 @@ h3 {
 .timeline-item div p {
   margin-bottom: 8px;
   color: var(--sage);
-  font-size: 0.82rem;
+  font-size: 1.025rem;
   font-weight: 900;
   text-transform: uppercase;
 }
