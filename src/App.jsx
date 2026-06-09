@@ -204,12 +204,13 @@ function App() {
                 <h3>{project.title}</h3>
                 <video
                   className="project-video"
-                  controls
+                  autoPlay
+                  loop
                   muted
                   playsInline
                   preload="metadata"
                   src={project.video}
-                  aria-label={`${project.title} screen recording demo`}
+                  aria-label={`${project.title} animated screen recording preview`}
                 />
                 <p>{project.description}</p>
                 <p className="impact">{project.impact}</p>

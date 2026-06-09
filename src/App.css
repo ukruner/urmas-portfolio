@@ -125,10 +125,10 @@ p {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 720px;
   margin-bottom: 22px;
-  font-size: clamp(2.25rem, 5.6vw, 4.7rem);
-  line-height: 1;
+  font-size: clamp(2rem, 4.8vw, 3.95rem);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -334,14 +334,16 @@ h3 {
 
 .project-video {
   display: block;
-  width: 100%;
-  max-height: 520px;
+  width: min(34%, 360px);
+  min-width: 260px;
+  max-height: 210px;
   aspect-ratio: 1440 / 671;
   margin: 16px 0 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--ink);
   object-fit: contain;
+  pointer-events: none;
   box-shadow: 0 18px 44px rgba(23, 33, 33, 0.1);
 }
 
@@ -505,13 +507,18 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.2rem, 11vw, 3.35rem);
+    font-size: clamp(1.95rem, 9.4vw, 2.95rem);
   }
 
   .project-card {
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 18px;
+  }
+
+  .project-video {
+    width: min(100%, 360px);
+    min-width: 0;
   }
 
   .skills-grid {
