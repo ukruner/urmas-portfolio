@@ -81,6 +81,8 @@ const training = [
 ]
 
 function App() {
+  const profileImage = `${import.meta.env.BASE_URL}images/profilepic.jpg`
+
   return (
     <main className="site-shell">
       <header className="topbar" aria-label="Primary navigation">
@@ -119,8 +121,8 @@ function App() {
         </div>
 
         <aside className="hero-panel" aria-label="Portfolio highlights">
-          <div className="portrait-mark" aria-hidden="true">
-            <span>UK</span>
+          <div className="portrait-mark">
+            <img src={profileImage} alt="Urmas Kruner" />
           </div>
           <div>
             <p className="panel-label">Current focus</p>
